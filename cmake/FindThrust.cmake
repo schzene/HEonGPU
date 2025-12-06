@@ -4,11 +4,16 @@ find_path(THRUST_INCLUDE_DIR
   NAMES thrust/version.h
   HINTS
     /usr/include/cuda
+    /usr/include/cuda/cccl
     /usr/local/include
     /usr/local/cuda/include
+    /usr/local/cuda/include/cccl
     ${CUDA_INCLUDE_DIRS}
     ${CUDA_TOOLKIT_ROOT_DIR}
     ${CUDA_SDK_ROOT_DIR}
+    ${CUDA_INCLUDE_DIRS}/cccl
+    ${CUDA_TOOLKIT_ROOT_DIR}/cccl
+    ${CUDA_SDK_ROOT_DIR}/cccl
 )
 
 if (THRUST_INCLUDE_DIR)
